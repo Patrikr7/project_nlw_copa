@@ -1,0 +1,18 @@
+---- BACKEND
+npm i typescript -D
+npx tsc --init
+npm i fastify
+npm i @fastify/cors
+npm i tsx -D
+npm i prisma -D
+npm i @prisma/client
+npx prisma init --datasource-provider SQLite
+npm i prisma-erd-generator @mermaid-js/mermaid-cli -D
+
+------ depois que mexe no schema.prisma
+npx prisma migrate dev
+npx prisma studio --- para visualizar o BD pelo navegador
+npx prisma generate --- para gerar o diagrama e afins
+
+---- FRONTEND
+npx create-next-app@latest --use-npm
