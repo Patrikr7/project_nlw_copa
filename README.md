@@ -1,6 +1,6 @@
 # NLW5 Copa
 
-<img width="1400" alt="NLW Copa" src="./img/image.png">
+<img width="1400" alt="NLW Copa" src="./image/image.png">
 
 <h1 align="center">NLW Copa | Rocketseat</h1>
 
