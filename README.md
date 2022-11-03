@@ -27,6 +27,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [Fastify](https://www.fastify.io/)
 - [Prisma](https://www.prisma.io/)
 - [NextJs](https://nextjs.org/)
+- [TailwindCss](https://tailwindcss.com/)
 - [Expo](https://docs.expo.dev/)
 - [NativeBase](https://docs.nativebase.io/installation)
 - [SQlite](https://www.sqlite.org/index.html)
