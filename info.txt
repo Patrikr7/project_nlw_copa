@@ -22,6 +22,14 @@ npx create-next-app@latest --use-npm
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 npm i axios
+npm install --save phosphor-react-native
+
+---- MOBILE
+npx expo login
+npm i react-native-svg-transformer
+npx expo install expo-auth-session expo-random
+npx expo install expo-web-browser
+npx expo start --- para startar o mobile
 
 ---- GITHUB
 git status
