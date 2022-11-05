@@ -10,6 +10,7 @@ npx prisma init --datasource-provider SQLite
 npm i prisma-erd-generator @mermaid-js/mermaid-cli -D
 npm i zod
 npm i short-unique-id
+npm i @fastify/jwt
 
 ------ depois que mexe no schema.prisma
 npx prisma migrate dev
