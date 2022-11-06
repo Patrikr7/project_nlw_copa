@@ -10,7 +10,7 @@ export async function authRoutes(fastify: FastifyInstance) {
       onRequest: [authenticate],
     },
     async (request) => {
-      await request.jwtVerify();
+      //await request.jwtVerify();
 
       return { user: request.user };
     }
@@ -28,7 +28,7 @@ export async function authRoutes(fastify: FastifyInstance) {
       {
         method: "GET",
         headers: {
-          Autorization: `Bearer ${access_token}`,
+          Authorization: `Bearer ${access_token}`,
         },
       }
     );
@@ -65,8 +65,7 @@ export async function authRoutes(fastify: FastifyInstance) {
       {
         name: user.name,
         avatarUrl: user.avatarUrl,
-      },
-      {
+      }, {
         sub: user.id,
         expiresIn: "7 days",
       }

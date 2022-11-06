@@ -11,6 +11,7 @@ npm i prisma-erd-generator @mermaid-js/mermaid-cli -D
 npm i zod
 npm i short-unique-id
 npm i @fastify/jwt
+npm i axios
 
 ------ depois que mexe no schema.prisma
 npx prisma migrate dev
@@ -31,6 +32,9 @@ npm i react-native-svg-transformer
 npx expo install expo-auth-session expo-random
 npx expo install expo-web-browser
 npx expo start --- para startar o mobile
+npm install @react-navigation/native
+npx expo install react-native-screens react-native-safe-area-context
+npm install @react-navigation/bottom-tabs
 
 ---- GITHUB
 git status

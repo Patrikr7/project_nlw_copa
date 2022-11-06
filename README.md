@@ -30,6 +30,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [TailwindCss](https://tailwindcss.com/)
 - [Expo](https://docs.expo.dev/)
 - [NativeBase](https://docs.nativebase.io/installation)
+- [ReactNavigation](https://reactnavigation.org/)
 - [SQlite](https://www.sqlite.org/index.html)
 
 
