@@ -7,7 +7,6 @@ import { authenticate } from "../plugins/authenticate";
 export async function poolRoutes(fastify: FastifyInstance) {
   fastify.get("/pools/count", async () => {
     const count = await prisma.pool.count();
-
     return { count };
   });
 
@@ -47,12 +46,9 @@ export async function poolRoutes(fastify: FastifyInstance) {
     return reply.status(201).send({ title });
   });
 
-  fastify.post(
-    "/pools/join",
-    {
+  fastify.post("/pools/join", {
       onRequest: [authenticate],
-    },
-    async (request, reply) => {
+    }, async (request, reply) => {
       const joinPoolBody = z.object({
         code: z.string(),
       });
@@ -74,7 +70,7 @@ export async function poolRoutes(fastify: FastifyInstance) {
 
       if (!pool) {
         return reply.status(400).send({
-          message: "Pool not found",
+          message: "Pool not found.",
         });
       }
 
@@ -147,12 +143,9 @@ export async function poolRoutes(fastify: FastifyInstance) {
     }
   );
 
-  fastify.get(
-    "/pools/:id",
-    {
+  fastify.get("/pools/:id", {
       onRequest: [authenticate],
-    },
-    async (request) => {
+    }, async (request) => {
       const getPoolParams = z.object({
         id: z.string(),
       });
@@ -174,14 +167,18 @@ export async function poolRoutes(fastify: FastifyInstance) {
               id: true,
               user: {
                 select: {
-                  name: true,
                   avatarUrl: true,
                 },
               },
             },
             take: 4,
           },
-          owner: true,
+          owner: {
+            select: {
+                id: true,
+                name: true,
+            },
+          },
         },
       });
 

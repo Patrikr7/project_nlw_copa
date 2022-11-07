@@ -8,12 +8,16 @@ interface Props {
   title: string;
   showBackButton?: boolean;
   showShareButton?: boolean;
+  backRoute?: "new" | "find" | "pools" | "details";
+  onShare?: () => void;
 }
 
 export function Header({
   title,
   showBackButton = false,
   showShareButton = false,
+  backRoute = null,
+  onShare = null,
 }: Props) {
   const { navigate } = useNavigation();
 
@@ -30,10 +34,7 @@ export function Header({
     >
       <HStack w="full" alignItems="center" justifyContent="space-between">
         {showBackButton ? (
-          <ButtonIcon
-            icon={CaretLeft}
-            onPress={() => navigate("pools")}
-          />
+          <ButtonIcon icon={CaretLeft} onPress={() => navigate(backRoute)} />
         ) : (
           <EmptyBoxSpace />
         )}
@@ -47,7 +48,11 @@ export function Header({
           {title}
         </Text>
 
-        {showShareButton ? <ButtonIcon icon={Export} /> : <EmptyBoxSpace />}
+        {showShareButton ? (
+          <ButtonIcon icon={Export} onPress={onShare} />
+        ) : (
+          <EmptyBoxSpace />
+        )}
       </HStack>
     </HStack>
   );

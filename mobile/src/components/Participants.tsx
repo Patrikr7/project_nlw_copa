@@ -16,7 +16,6 @@ interface Props {
 export function Participants({participants, count }: Props) {
   return (
     <HStack>
-      {console.log('Participants: ', participants)}
       {
         participants && participants.map((participant) => (
           <Avatar
